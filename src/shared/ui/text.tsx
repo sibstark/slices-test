@@ -1,3 +1,3 @@
 import React from "react";
 
-export const Text = () => <div>Text</div>
+export const Text: React.FC = () => <div>Text</div>;

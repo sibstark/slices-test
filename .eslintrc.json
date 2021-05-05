@@ -7,7 +7,10 @@
     "prettier/react",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:import/warnings",
+    "plugin:import/errors",
+    "plugin:import/typescript"
   ],
   "plugins": [
     "@typescript-eslint",
@@ -17,7 +20,25 @@
     "import"
   ],
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "@slices/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "never",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "desc" /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */,
+          "caseInsensitive": true /* ignore case. Options: [true, false] */
+        }
+      }
+    ]
   },
   "globals": {
     "React": "writable",
@@ -44,5 +65,16 @@
         "@typescript-eslint/no-var-requires": 0
       }
     }
-  ]
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
+  }
 }
