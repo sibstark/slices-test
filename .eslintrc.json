@@ -1,0 +1,48 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "prettier",
+    "react-hooks",
+    "import"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  },
+  "globals": {
+    "React": "writable",
+    "expect": true,
+    "describe": true,
+    "it": true,
+    "fixture": true,
+    "test": true,
+    "jest": true,
+    "document": true,
+    "window": true,
+    "fetch": true,
+    "navigator": true,
+    "browser": true,
+    "process": true,
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "typescript/no-var-requires": 0,
+        "@typescript-eslint/no-var-requires": 0
+      }
+    }
+  ]
+}

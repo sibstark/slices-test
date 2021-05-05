@@ -1,8 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Summ } from "@slices/utils"
-import { Text } from "@slices/ui"
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import { Summ } from "@slices/utils";
+import { Text } from "@slices/ui";
+import "./App.css";
 
 function App() {
   const s = Summ(1, 2);
