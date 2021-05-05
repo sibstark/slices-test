@@ -6,7 +6,8 @@ module.exports = function(config, env) {
 		config,
 		override(
 			addWebpackAlias({
-				"@utils": path.resolve(__dirname, 'src/utils'),
+				"@slices/utils": path.resolve(__dirname, 'src/utils'),
+				"@slices/ui": path.resolve(__dirname, 'src/shared/ui'),
 			})
 		)(config, env)
 	);

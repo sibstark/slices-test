@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Summ } from "@utils"
+import { Summ } from "@slices/utils"
+import { Text } from "@slices/ui"
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <div>{s}</div>
+        <Text />
         <a
           className="App-link"
           href="https://reactjs.org"
