@@ -38,7 +38,8 @@
           "caseInsensitive": true /* ignore case. Options: [true, false] */
         }
       }
-    ]
+    ],
+    "@typescript-eslint/no-empty-interface": "off"
   },
   "globals": {
     "React": "writable",

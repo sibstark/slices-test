@@ -2,8 +2,10 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@slices/utils": ["utils"],
-      "@slices/ui": ["shared/ui"]
+      "@slices/utils": ["shared/lib"],
+      "@slices/ui": ["shared/ui"],
+      "@slices/infrastructure": ["shared/model"],
+      "@slices/pages": ["pages"]
     }
   }
 }
